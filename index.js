@@ -11,7 +11,7 @@ function start(client) {
       client
         .sendText(
           message.from,
-          "Boa tarde, você entrou em contato com a Zambri Transportes, no momento estamos em horário de almoço, por favor tente novamente mais tarde! Agradecemos pela compreensão."
+          "Boa tarde!\nVocê entrou em contato com a Zambri Transportes, no momento estamos em horário de almoço, entraremos em contato assim que retornarmos.\nAgradecemos pela compreensão."
         )
         .then((result) => {
           console.log("Result: ", result);
