@@ -8,7 +8,7 @@ wppconnect
 function start(client) {
   client.onMessage((message) => {
     if (message.body != "") {
-      if (message.isGroupMsg == true) {
+      if (message.isGroupMsg == true || message.isMedia == true) {
         return;
       }
 
