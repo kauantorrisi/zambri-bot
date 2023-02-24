@@ -8,16 +8,20 @@ wppconnect
 function start(client) {
   client.onMessage((message) => {
     if (message.body != "") {
+      if (message.isGroupMsg == true) {
+        return;
+      }
+
       client
         .sendText(
           message.from,
-          "Boa tarde!\nVocê entrou em contato com a Zambri Transportes, no momento estamos em horário de almoço, entraremos em contato assim que retornarmos.\nAgradecemos pela compreensão."
+          "Boa tarde!\nVocê entrou em contato com Kauan, no momento estamos em horário de almoço, entraremos em contato assim que retornarmos.\nAgradecemos pela compreensão."
         )
         .then((result) => {
           console.log("Result: ", result);
         })
         .catch((e) => {
-          console.er("Error when sending: ", e);
+          console.error("Error when sending: ", e);
         });
     }
   });
